@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  /* Cores Principais */
+  --primary-color: #2e7032; /* Verde Escuro (Foco em sustentabilidade) */
+  --secondary-color: #ffaa00; /* Laranja (Energia/Sol) */
+
+  /* Cores de Apoio e Background */
+  --accent-blue: #0DA7K1; /* Azul Vibrante (Tecnologia) */
+  --dark-blue: #1976d2; /* Azul Sólido */
+  --light-green: #66bb6a; /* Verde Claro (Destaques) */
+
+  /* Escala de Cinzas para textos e fundos */
+  --text-dark: #1a1a1a;
+  --bg-white: #ffffff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700; /* Peso Bold (Negrito) para títulos, conforme o manual */
+  line-height: 1.2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
