@@ -1,5 +1,8 @@
 ---
 import "../styles/global.css";
+import Navbar from "../components/Navbar.astro"
+import Footer from "../components/Footer.astro"
+
 
 const { title = "Energia Jovem" } = Astro.props;
 ---
@@ -12,7 +15,28 @@ const { title = "Energia Jovem" } = Astro.props;
   <title>{title}</title>
 </head>
 
+<script>
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 180; // Ajuste este valor (em px) para disparar mais cedo ou mais tarde
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", reveal);
+</script>
+
 <body class="">
-  <slot />
+	<Navbar />
+	<main>
+		<slot />
+	</main>
+	<Footer />
 </body>
 </html>

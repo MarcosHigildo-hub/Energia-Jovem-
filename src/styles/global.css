@@ -44,3 +44,16 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Estado inicial: invisível e deslocado para baixo */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+/* Estado final: visível e na posição original */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
