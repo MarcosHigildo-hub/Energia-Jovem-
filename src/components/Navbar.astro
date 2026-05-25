@@ -1,0 +1,112 @@
+---
+
+---
+
+<nav
+  class="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-gray-400"
+>
+  <div class="max-w-7xl mx-auto px-6 md:px-4 lg:px-8">
+    <div class="flex justify-between h-20 items-center">
+      <!-- Logo -->
+      <div class="flex-shrink-0 flex items-center h-20">
+        <a href="/" class="block">
+          <img
+            src="/logo.webp"
+            alt="Logo Cooperativa Energia Jovem"
+            class="h-20 md:h-24 object-contain"
+          />
+        </a>
+      </div>
+
+      <!-- Links Desktop -->
+      <div class="hidden md:flex space-x-6">
+        <a
+          href="/"
+          class="hover:text-[#FFAA00] font-semibold transition-all duration-300"
+          >Início</a
+        >
+        <a
+          href="/#about"
+          class="hover:text-[#FFAA00] font-semibold transition-all duration-300"
+          >Sobre Nós</a
+        >
+        <a
+          href="/#service"
+          class="hover:text-[#FFAA00] font-semibold transition-all duration-300"
+          >Serviços</a
+        >
+        <a
+          href="/#contactos"
+          class="hover:text-[#FFAA00] font-semibold transition-all duration-300"
+          >Contactos</a
+        >
+      </div>
+
+      <!-- Botão CTA -->
+      <div class="hidden md:flex">
+        <a
+          href="https://wa.me/258872723365?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-[#FFAA00] text-white px-6 py-2 rounded-full font-bold hover:bg-[#e69900] transition-all shadow-md"
+        >
+          Orçamento
+        </a>
+      </div>
+
+      <!-- Botão Menu Mobile (Ícone Hambúrguer) -->
+      <div class="md:hidden flex items-center">
+        <button
+          id="menu-btn"
+          class="text-gray-700 hover:text-[#1976D2] focus:outline-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-menu-icon lucide-menu"
+            ><path d="M4 5h16"></path><path d="M4 12h16"></path><path
+              d="M4 19h16"></path></svg
+          >
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu Mobile (oculto por padrão) -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden bg-white border-t border-gray-100 p-4 space-y-4"
+  >
+    <a href="/" class="block text-gray-700 hover:text-[#1976D2]">Início</a>
+    <a href="/sobre" class="block text-gray-700 hover:text-[#1976D2]"
+      >Sobre Nós</a
+    >
+    <a href="/servicos" class="block text-gray-700 hover:text-[#1976D2]"
+      >Serviços</a
+    >
+    <!-- <a href="/materiais" class="block text-gray-700 hover:text-[#1976D2]"
+      >Materiais</a
+    > -->
+    <a
+      href="/contacto"
+      class="block bg-[#FFAA00] text-white text-center py-2 rounded-lg font-bold"
+      >Orçamento</a
+    >
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+
+  btn?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
+  });
+</script>
